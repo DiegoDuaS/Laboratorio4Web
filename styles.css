@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
     width:1200px;
     height:1200px;
@@ -9,12 +10,24 @@ section {
     height:1100px;
 }
 
+/* Estilos del fondo */
 .dugtrio {
     position: relative;
     right:100px;
     width:1100px;
     background-image:radial-gradient(at top left, white 1%, rgb(109, 196, 234),rgb(28, 154, 208) );
 }
+
+.ground {
+    width:1100px;
+    height:600px;
+    background-image: linear-gradient(rgb(65, 112, 59),rgb(44, 74, 40),rgb(97, 78, 63));
+    position: relative;
+    bottom: 250px;
+    border-top: 2px solid black;
+}
+
+/* Estilos de los Digletts */
 
 .diglett {
     width: 333px;
@@ -23,36 +36,38 @@ section {
     border-radius: 170px;
     border: 3px solid black;
     position: relative;
-    transform-origin: bottom center;
+    transform-origin: top center;
 }
 
-.cuerpo:first-child {
+.diglett:first-child {
     top: 170px;
     left: 341px;
     transform: rotate(2deg);
+    animation: saltar1 2s linear infinite alternate;
 }
 
-
-.cuerpo:nth-child(2) {
+.diglett:nth-child(2) {
     bottom: 317px;
     left: 146px;
     transform: rotate(-4deg);
+    animation: saltar2 2s linear infinite alternate;
 }
 
-.cuerpo:last-child {
+.diglett:last-child {
     bottom: 900px;
     left: 526px;
     transform: rotate(7deg);
+    animation: saltar3 2s linear infinite alternate;
 }
 
 .nariz {
     width: 130px;
     height: 75px;
-    background-image: radial-gradient(at bottom right
-    , rgb(211, 162, 171) 20%, pink 60%);
+    background-color: pink;
     border-radius: 50%;
     border: 3px solid black;
     position: relative;
+    transition: background-color red 0.3 ease;
 }
 
 .nariz1 {
@@ -81,6 +96,7 @@ section {
     border: 3px solid black;
     position: relative;
     transform: rotate(90deg);
+    transition: background-image 2s ease;
 }
 
 .ojo_iz {
@@ -113,30 +129,7 @@ section {
     transform: rotate(-7deg);
 }
 
-.diglett:hover {
-    animation: saltar 0.5s ease infinite alternate;
-}
-
-@keyframes saltar {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.ground {
-    width:1100px;
-    height:600px;
-    background-image: linear-gradient(rgb(65, 112, 59),rgb(44, 74, 40),rgb(97, 78, 63));
-    position: relative;
-    bottom: 250px;
-    border-top: 2px solid black;
-}
+/* Estilos del suelo */
 
 .dirt {
     width: 800px;
@@ -190,8 +183,73 @@ section {
     bottom: 250px;
     left: 20px;
     height: 100px;
-
 }
+
+
+/* Animaciones */
+.diglett:hover {
+    animation: esconder 4s ease infinite alternate;
+}
+
+.nariz:hover {
+    background-color: red;
+}
+
+@keyframes esconder {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes saltar1 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes saltar2 {
+    0% {
+        transform: translateY(0);
+        transform: rotate(-4deg);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+        transform: rotate(4deg);
+    }
+}
+
+@keyframes saltar3 {
+    0% {
+        transform: translateY(0);
+        transform: rotate(7deg);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+        transform: rotate(-7deg);
+    }
+}
+
+
+
 
 
 
