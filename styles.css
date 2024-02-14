@@ -1,10 +1,20 @@
-p {
+body {
     margin: 0;
     padding: 0;
+    width:1200px;
+    height:1200px;
+    
+}
+
+section {
+    left: 250px;
+    height:1100px;
+    background-image:radial-gradient(at top left, white 1%, rgb(109, 196, 234),rgb(28, 154, 208) );
 }
 
 .dugtrio {
     position: relative;
+    right:100px;
 }
 
 .diglett {
@@ -103,5 +113,43 @@ p {
     left: 20px;
     transform: rotate(-7deg);
 }
+
+.diglett:hover {
+    animation: saltar 0.5s ease infinite alternate;
+}
+
+@keyframes saltar {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.ground {
+    width:1200px;
+    height:800px;
+    background-image: linear-gradient(rgb(65, 112, 59),rgb(44, 74, 40),rgb(97, 78, 63), rgb(173, 146, 109));
+    position: relative;
+    bottom: 250px;
+}
+
+.dirt {
+    width: 800px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: 100px solid #867056;
+    position: relative;
+    background-image: linear-gradient(rgb(91, 74, 62), rgb(151, 129, 98));
+    bottom: 50px;
+    left: 60px;
+}
+
+
 
 
