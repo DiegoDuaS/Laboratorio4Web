@@ -1,13 +1,11 @@
 body {
-    margin: 0;
-    padding: 0;
     width:1200px;
     height:1200px;
     
 }
 
 section {
-    left: 250px;
+    left: 500px;
     height:1100px;
     background-image:radial-gradient(at top left, white 1%, rgb(109, 196, 234),rgb(28, 154, 208) );
 }
@@ -143,12 +141,42 @@ section {
     height: 0px;
     border-right: 60px solid transparent;
     border-left: 60px solid transparent;
-    border-bottom: 100px solid #867056;
+    border-bottom: 100px solid rgb(123, 117, 114);
     position: relative;
-    background-image: linear-gradient(rgb(91, 74, 62), rgb(151, 129, 98));
     bottom: 50px;
     left: 60px;
+    display: flex;
 }
+
+.roca {
+    width: 95px;
+    height: 140px; 
+    bottom: 20px;
+    position: relative;
+    background-image: radial-gradient(at top left, rgb(132, 106, 91) 50%, rgb(113, 87, 47));
+}
+
+.roca1 {
+    border-radius: 78% 22% 39% 61% / 60% 17% 83% 40%;
+}
+
+.roca2 {
+    border-radius: 61% 39% 12% 88% / 40% 90% 10% 60%;
+}
+
+.roca3 {
+    border-radius: 34% 66% 53% 47% / 73% 19% 81% 27%; 
+}
+
+.dirt + .roca3 {
+    bottom: 100px;
+}
+
+.dirt + .roca1 {
+    bottom: 100px;
+}
+
+
 
 
 
